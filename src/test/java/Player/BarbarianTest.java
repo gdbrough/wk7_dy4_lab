@@ -1,5 +1,6 @@
 package Player;
 
+import Weapon.WeaponType;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,7 +12,7 @@ public class BarbarianTest {
 
     @Before
     public void setUp() {
-        barbarian = new Barbarian("Conan", 100, 10, FighterType.BARBARIAN);
+        barbarian = new Barbarian("Conan", 100, 10, FighterType.BARBARIAN, WeaponType.CLUB);
     }
 
     @Test
@@ -31,6 +32,11 @@ public class BarbarianTest {
 
     @Test
     public void testCanGetPreferredWeapon() {
-        assertEquals("Club", barbarian.getPreferredWeapon());
+        assertEquals("club", barbarian.getPreferredWeapon());
+    }
+
+    @Test
+    public void testCanGetCurrentWeapon() {
+        assertEquals("club", barbarian.getCurrentWeapon().getName());
     }
 }

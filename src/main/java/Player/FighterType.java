@@ -2,9 +2,9 @@ package Player;
 
 public enum FighterType {
 
-    DRAWF("Axe"),
-    BARBARIAN("Club"),
-    KNIGHT("Sword");
+    DRAWF("axe"),
+    BARBARIAN("club"),
+    KNIGHT("sword");
 
 
     private String preferedWeapon;

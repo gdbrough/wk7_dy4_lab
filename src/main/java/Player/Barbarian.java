@@ -1,9 +1,10 @@
 package Player;
 
-public class Barbarian extends Fighter {
+import Weapon.WeaponType;
 
-    public Barbarian(String name, int healthPoints, int hitPoints, FighterType type) {
-        super(name, healthPoints, hitPoints, type);
+public class Barbarian extends Fighter {
+    public Barbarian(String name, int healthPoints, int hitPoints, FighterType type, WeaponType currentWeaponType) {
+        super(name, healthPoints, hitPoints, type, currentWeaponType);
     }
 
 }

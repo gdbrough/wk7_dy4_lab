@@ -1,5 +1,6 @@
 package Player;
 
+import Weapon.WeaponType;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,7 +12,7 @@ public class DwarfTest {
 
     @Before
     public void setUp() {
-        dwarf = new Dwarf("Gimmly", 100, 10, FighterType.DRAWF);
+        dwarf = new Dwarf("Gimmly", 100, 10, FighterType.DRAWF, WeaponType.AXE);
     }
 
     @Test
@@ -31,6 +32,11 @@ public class DwarfTest {
 
     @Test
     public void testCanGetPreferredWeapon() {
-        assertEquals("Axe", dwarf.getPreferredWeapon());
+        assertEquals("axe", dwarf.getPreferredWeapon());
+    }
+
+    @Test
+    public void testCanGetCurrentWeapon() {
+        assertEquals("axe", dwarf.getCurrentWeapon().getName());
     }
 }

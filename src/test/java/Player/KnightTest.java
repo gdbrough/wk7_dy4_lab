@@ -1,5 +1,9 @@
 package Player;
 
+//import Enemy.Enemy;
+import Enemy.Enemy;
+import Enemy.Troll;
+import Weapon.WeaponType;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,7 +15,7 @@ public class KnightTest {
 
     @Before
     public void setUp() {
-        knight = new Knight("Arthur", 100, 10, FighterType.KNIGHT);
+        knight = new Knight("Arthur", 100, 10, FighterType.KNIGHT, WeaponType.SWORD);
     }
 
     @Test
@@ -31,6 +35,23 @@ public class KnightTest {
 
     @Test
     public void testCanGetPreferredWeapon() {
-        assertEquals("Sword", knight.getPreferredWeapon());
+        assertEquals("sword", knight.getPreferredWeapon());
+    }
+
+    @Test
+    public void testCanGetCurrentWeapon() {
+        assertEquals("sword", knight.getCurrentWeapon().getName());
+    }
+
+    @Test
+    public void testCanChangeWeapon() {
+        knight.setCurrentWeaponType(WeaponType.HAMMER);
+        assertEquals("hammer", knight.getCurrentWeapon().getName());
+    }
+
+    @Test
+    public void testCanAttack() {
+        Troll troll = new Troll("Bob", 100, 100);
+        assertEquals(85,knight.attack(troll));
     }
 }
