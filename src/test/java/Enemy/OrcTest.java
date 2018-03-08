@@ -35,7 +35,8 @@ public class OrcTest {
     @Test
     public void testCanAttack() {
         Knight knight = new Knight("Bob", 100, 100, FighterType.KNIGHT, WeaponType.HAMMER);
-        assertEquals(97,orc.attack(knight));
+        orc.attack(knight);
+        assertEquals(97,knight.getHealthPoints());
     }
 
 

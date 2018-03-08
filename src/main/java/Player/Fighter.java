@@ -26,12 +26,11 @@ public abstract class Fighter extends Player {
         this.currentWeaponType = currentWeaponType;
     }
 
-    public int attack(Enemy enemy){
+    public void attack(Enemy enemy){
         int attackPoints = getHitPoints();
         if (getCurrentWeapon().getName() == getPreferredWeapon()) {
             attackPoints += getCurrentWeapon().getBonusPoints();
         }
         enemy.setHealthPoints(enemy.getHealthPoints() - attackPoints);
-        return enemy.getHealthPoints();
     }
 }

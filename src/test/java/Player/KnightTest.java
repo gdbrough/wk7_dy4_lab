@@ -50,8 +50,18 @@ public class KnightTest {
     }
 
     @Test
-    public void testCanAttack() {
+    public void testCanAttack__PreferredWeapon() {
         Troll troll = new Troll("Bob", 100, 100);
-        assertEquals(85,knight.attack(troll));
+        knight.attack(troll);
+        assertEquals(85, troll.getHealthPoints());
+
+    }
+
+    @Test
+    public void testCanAttack__OtherWeapon() {
+        knight.setCurrentWeaponType(WeaponType.HAMMER);
+        Troll troll = new Troll("Bob", 100, 100);
+        knight.attack(troll);
+        assertEquals(90, troll.getHealthPoints());
     }
 }

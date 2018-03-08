@@ -30,8 +30,7 @@ public abstract class Enemy {
         this.healthPoints = healthPoints;
     }
 
-    public int attack(Player player){
+    public void attack(Player player){
         player.setHealthPoints(player.getHealthPoints() - getHitPoints());
-        return player.getHealthPoints();
     }
 }
