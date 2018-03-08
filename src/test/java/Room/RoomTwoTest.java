@@ -5,22 +5,22 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class RoomOneTest {
+public class RoomTwoTest {
 
-    RoomOne roomOne;
+    RoomTwo roomTwo;
 
     @Before
     public void setUp() {
-        roomOne = new RoomOne("Room 1", RoomType.FIGHT, null, null);
+        roomTwo = new RoomTwo("Room 2", RoomType.COLLECT, null);
     }
 
     @Test
     public void testCanGetRoomName(){
-        assertEquals("Room 1", roomOne.getRoomName());
+        assertEquals("Room 2", roomTwo.getRoomName());
     }
 
     @Test
     public void testCanGetRoomType() {
-        assertEquals("fight", roomOne.getRoomType());
+        assertEquals("collect", roomTwo.getRoomType());
     }
 }

@@ -1,8 +1,11 @@
 package Room;
 
-public class RoomOne extends Room {
+import Enemy.Enemy;
+import Player.Player;
 
-    public RoomOne(String roomName, RoomType roomType) {
-        super(roomName, roomType);
+public class RoomOne extends RoomFight {
+
+    public RoomOne(String roomName, RoomType roomType, Player player, Enemy enemy) {
+        super(roomName, roomType, player, enemy);
     }
 }
