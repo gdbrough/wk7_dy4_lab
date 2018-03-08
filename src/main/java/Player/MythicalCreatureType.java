@@ -1,6 +1,6 @@
 package Player;
 
-public enum MythicalCreature {
+public enum MythicalCreatureType {
     DRAGON,
-    
+    ORGE;
 }
