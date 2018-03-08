@@ -1,5 +1,6 @@
 package Player;
 
+import Weapon.MythicalCreatureType;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -8,6 +9,7 @@ import static org.junit.Assert.assertEquals;
 public class WizardTest {
 
     Wizard wizard;
+    MythicalCreatureType creatureType;
 
     @Before
     public void setUp() {
@@ -36,6 +38,6 @@ public class WizardTest {
 
     @Test
     public void testCanGetPreferredCreature() {
-        assertEquals(MythicalCreatureType.DRAGON, wizard.getPreferredCreature());
+        assertEquals("dragon", wizard.getPreferredCreature());
     }
 }

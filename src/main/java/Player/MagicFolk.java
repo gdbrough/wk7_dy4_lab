@@ -1,5 +1,7 @@
 package Player;
 
+import Weapon.MythicalCreatureType;
+
 public abstract class MagicFolk extends Player {
 
     private MagicFolkType type;
@@ -15,7 +17,7 @@ public abstract class MagicFolk extends Player {
         return this.type.getPreferredSpell();
     }
 
-    public MythicalCreatureType getPreferredCreature() {
-        return this.type.getPreferredCreature();
+    public String getPreferredCreature() {
+        return creatureType.getCreature();
     }
 }

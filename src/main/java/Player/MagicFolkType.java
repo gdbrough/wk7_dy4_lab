@@ -1,5 +1,7 @@
 package Player;
 
+import Weapon.MythicalCreatureType;
+
 public enum MagicFolkType {
     WIZARD("Lightning Strike", MythicalCreatureType.DRAGON),
     WARLOCK("Fireball", MythicalCreatureType.ORGE);

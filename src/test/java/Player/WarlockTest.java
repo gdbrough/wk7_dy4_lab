@@ -1,5 +1,6 @@
 package Player;
 
+import Weapon.MythicalCreatureType;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -35,6 +36,6 @@ public class WarlockTest {
 
     @Test
     public void testCanGetPreferredCreature() {
-        assertEquals(MythicalCreatureType.ORGE, warlock.getPreferredCreature());
+        assertEquals("ogre", warlock.getPreferredCreature());
     }
 }
