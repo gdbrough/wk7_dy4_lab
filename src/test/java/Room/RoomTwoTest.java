@@ -11,7 +11,7 @@ public class RoomTwoTest {
 
     @Before
     public void setUp() {
-        roomTwo = new RoomTwo("Room 2", RoomType.COLLECT, null);
+        roomTwo = new RoomTwo("Room 2", RoomType.COLLECT, null, null);
     }
 
     @Test
